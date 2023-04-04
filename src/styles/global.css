@@ -18,7 +18,11 @@ body {
   padding: 1rem;
   line-height: 1.5;
 }
-
+@media(max-width:767px){
+  body{
+    padding: 0;
+  }
+}
 * {
   box-sizing: border-box;
 }
