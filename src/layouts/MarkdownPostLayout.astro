@@ -1,0 +1,12 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const {frontmatter}  = Astro.props
+---
+<BaseLayout pageTitle={frontmatter.title}   >
+    <h3>{frontmatter.description}</h3>
+    <slot/>
+    <div style={{display:"flex", flexWrap: "wrap", alignItems:'center'}}>
+        <h3>If you have any feedback or comments, feel free to reach out to me!</h3>
+    </div>
+</BaseLayout>
+

@@ -1,0 +1,53 @@
+html {
+  background-color:#fdfbf0;
+  font-family: sans-serif;
+  background: url('/background2.svg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+@font-face {
+  font-family: 'Inria Sans';
+  src: url('/Inria_Sans/InriaSans-Regular.ttf');
+}
+body {
+  font-family: 'Inria Sans', Arial, sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color:#F6416C;
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+h2{
+  color:#F6416C;
+}
+h3 {
+  color:#f7b800;
+}
+* a {
+  text-decoration: none;
+  color: #00B8A9;
+}
+
+.clearRead {
+  background-color: #fdfbf0;
+  padding:15px;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+img {
+  max-width: 250px;
+  border: green 2px solid;
+}
