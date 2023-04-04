@@ -1,14 +1,14 @@
 html {
   background-color:#fdfbf0;
   font-family: sans-serif;
-  background: url('/background2.svg') no-repeat center center fixed;
+  background: url('/STKalinow/background2.svg') no-repeat center center fixed;
   background-size: cover;
 }
 
 
 @font-face {
   font-family: 'Inria Sans';
-  src: url('/Inria_Sans/InriaSans-Regular.ttf');
+  src: url('/STKalinow/Inria_Sans/InriaSans-Regular.ttf');
 }
 body {
   font-family: 'Inria Sans', Arial, sans-serif;
