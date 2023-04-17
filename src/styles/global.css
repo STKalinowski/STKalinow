@@ -38,6 +38,10 @@ h2{
 h3 {
   color:#f7b800;
 }
+h4{
+  color:#F6416C; 
+  margin: 2px 0;
+}
 * a {
   text-decoration: none;
   color: #00B8A9;
@@ -54,4 +58,9 @@ h3 {
 img {
   max-width: 250px;
   border: green 2px solid;
+}
+
+ul p{
+  margin: 2px 0;
+
 }
