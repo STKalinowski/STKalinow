@@ -1,5 +1,6 @@
 ---
 const {blogUrl} = Astro.props;
 const {blogTitle} = Astro.props;
+const {blogDescription} = Astro.props;
 ---
-<li><a href={blogUrl}>{blogTitle}</a></li>
+<li><a href={blogUrl}>{blogTitle}<span> - {blogDescription}</span></a></li>
