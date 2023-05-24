@@ -1,11 +1,14 @@
 ---
 import Social from "./Social.astro";
+import FancyButton from './FancyButton.astro';
 ---
 <div>
     <h1>STKalinow</h1>
-        <a href="/">Blog</a>
-        <a href="/about/">About</a>
-        <Social platform="Twitter" username="STKalinow"/>
-        <Social platform="Github" username="STKalinowski"/>
+    <div style={{'display':'flex', 'grid-gap':'12px'}}>
+        <FancyButton pageLink='/' ButtonColor="EA4C4C" label='Blog'/>
+        <FancyButton pageLink='/about' ButtonColor="A1C45A" label='About'/>
+        <FancyButton pageLink='https://www.twitter.com/STKalinow' ButtonColor="2BA5FF" label='Twitter'/>
+        <FancyButton pageLink='https://www.Github.com/STKalinowski' ButtonColor="F1C550" label='Github'/>
+    </div>
 </div>
 <hr/>

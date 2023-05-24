@@ -1,0 +1,13 @@
+---
+const {pageLink} = Astro.props
+const {ButtonColor} = Astro.props
+const {label} = Astro.props
+import '../styles/FancyButton.css';
+---
+<div id='ButtonBack'>
+    <a id='ButtonMain' href={pageLink} style={'background-color: #'+ButtonColor.toString()+';'}>
+       <span>
+            {label}
+        </span>
+    </a>
+</div>

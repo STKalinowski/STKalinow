@@ -2,5 +2,12 @@
 const {blogUrl} = Astro.props;
 const {blogTitle} = Astro.props;
 const {blogDescription} = Astro.props;
+const {blogColor} = Astro.props;
+import '../styles/blog.css';
 ---
-<li><a href={blogUrl}>{blogTitle}<span> - {blogDescription}</span></a></li>
+<a href={blogUrl}>
+    <div class='blog-panel' style={'background-color: #'+blogColor.toString()+';'} id='Main'>
+        <h3>{blogTitle}</h3>
+        <p>{blogDescription}</p>
+    </div>
+</a>

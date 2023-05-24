@@ -3,16 +3,19 @@ const pageTitle = "Blog";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob('../pages/posts/*.md');
-
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<h3>This is my personal site where you can find some of my thoughts, ideas, and projects.</h3>
-	<h4>Legend:</h4>
-	<ul>
-		<p>Questions - Something I have learned or set out to learn.		</p>
-		<p>Notes - A scattered recording of ideas from external sources with soem thoughts thrown in.</p>
-		<p>Thoughts - Mainly personal thoughts and ideas.</p>
-	</ul>
+	<div id="Legend" >
+		<h4>Legend:</h4>
+		<ul>
+			<p>Questions - Something I have learned or set out to learn.		</p>
+			<p>Notes - A scattered recording of ideas from external sources with some thoughts thrown in.</p>
+			<p>Thoughts - Mainly personal thoughts and ideas.</p>
+		</ul>
+	</div>
 	<hr/>
-	{allPosts.map((p) => <BlogPost blogUrl={p.url} blogTitle={p.frontmatter.title} blogDescription={p.frontmatter.description}/>)}
+	<div id='PostsArea'>
+		{allPosts.map((p) => <BlogPost blogUrl={p.url} blogTitle={p.frontmatter.title} blogDescription={p.frontmatter.description} blogColor={p.frontmatter.color}/>)}
+	</div>
 </BaseLayout>
