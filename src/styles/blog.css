@@ -3,3 +3,6 @@
     padding: 5px;
     height:275px;
 }
+.blog-panel:hover{
+    text-decoration: none;
+}

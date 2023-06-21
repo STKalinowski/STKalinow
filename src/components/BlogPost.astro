@@ -3,11 +3,24 @@ const {blogUrl} = Astro.props;
 const {blogTitle} = Astro.props;
 const {blogDescription} = Astro.props;
 const {blogColor} = Astro.props;
+const {blogDate} = Astro.props;
 import '../styles/blog.css';
+
+function formatDate(dateString) {
+    let date = new Date(dateString);
+
+    let day = String(date.getDate()).padStart(2, '0');
+    let month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    let year = date.getFullYear();
+
+    return `${day}-${month}-${year}`;
+}
 ---
+
 <a href={blogUrl}>
-    <div class='blog-panel' style={'background-color: #'+blogColor.toString()+';'} id='Main'>
+    <div class='blog-panel' style={'background-color: #'+blogColor.toString()+';display:flex; flex-direction:column; color:black;text-decoration-color: black;'} id='Main'>
         <h3>{blogTitle}</h3>
         <p>{blogDescription}</p>
+        <p style={'text-align:right; margin-top:auto;'}>{formatDate(blogDate)}</p>
     </div>
 </a>

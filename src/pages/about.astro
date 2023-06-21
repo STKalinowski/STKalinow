@@ -12,19 +12,25 @@ const identity = {
 }
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <h2>This blog</h2>
-    <li>Learning to improve my ability to write & communicate.</li>
-    <li>A little place to document any small things I learnings.</li>
-    <li>Putting myself out there.</li>
-    <p>Things I plan to blog about:</p>
-    <p> Programming, Personal Projects, Esports, and stuff I've been reading about.</p>
-    <h2>Myself</h2>
-    <p>My name is {identity.firstName} {identity.lastName}. 
-    I live in {identity.city}, {identity.province}, {identity.country} and am currently looking for work.
-    Learning to take things step by step. I enjoy reading, playing games, and just making sense of things.
-    I've learned that building this is hard and I over think things a lot!
-    I am personally interested in the future of tools & technology, currently looking into the idea of neural games.
-    </p>
+    <div class="Box" style={{'background-color':'#16AA98', marginBottom:'8px'}}>
+        <h2 style={{marginTop:'0px'}}>This blog</h2>
+        <li>Learning to improve my writing.</li>
+        <li>A little place to document any small things I learnings.</li>
+        <li>Putting myself out there. lol</li>
+        <p>Things I plan to blog about:</p>
+        <p> Programming, Personal Projects, Esports, and Books I've been reading.</p>
+    </div>
+    <div class="Box" style={{'background-color':'#EA4C4C'}}>
+        <h2 style={{marginTop:'0px'}}>Myself</h2>
+        <p>My name is {identity.firstName} {identity.lastName}. 
+            I live in {identity.city}, {identity.province}, {identity.country} and am currently looking for work.
+            Learning to take things step by step. I enjoy reading, playing games, and just making sense of things.
+            I've learned that building this is hard and I over think things a lot!
+            I am personally interested in the future of tools & technology, currently looking into the idea of neural games.
+        </p>
+    </div>
+
+    <hr/>
     <p>Feel free to reach out to me on twitter or through my email!</p>
-    <h3>Email: kalinowski.stas@gmail.com</h3>
+    <p>Email: kalinowski.stas@gmail.com</p>
 </BaseLayout>
