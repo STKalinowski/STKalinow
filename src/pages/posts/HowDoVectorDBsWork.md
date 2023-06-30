@@ -123,5 +123,3 @@ Lastly, lets circle back and discuss a concept relevant to the storage part of v
 So thats pretty much it, just a high level overview of vector databases. Hopefully you intuition has been built up. I didn't want to focus on the particular maths nor the database portion of worrying about page tables and being memory aware. 
 
 You now have an idea of the techniques and can look up anything.
-
-If you want to actually use them then here is a good resource I found:
