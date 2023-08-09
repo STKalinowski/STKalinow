@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Thoughts: Dark Arts of Language Models | STKalinow</title>
+<meta name="keywords" content="">
+<meta name="description" content="Thoughts about the future of applications and augmenting them with LLMs.">
+<meta name="author" content="Stanislaw Kalinowski">
+<link rel="canonical" href="http://STKalinow.ca/posts/darkartsofllms/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://STKalinow.ca/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://STKalinow.ca/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://STKalinow.ca/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://STKalinow.ca/apple-touch-icon.png">
+<link rel="mask-icon" href="http://STKalinow.ca/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Thoughts: Dark Arts of Language Models" />
+<meta property="og:description" content="Thoughts about the future of applications and augmenting them with LLMs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://STKalinow.ca/posts/darkartsofllms/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-06-20T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Thoughts: Dark Arts of Language Models"/>
+<meta name="twitter:description" content="Thoughts about the future of applications and augmenting them with LLMs."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://STKalinow.ca/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Thoughts: Dark Arts of Language Models",
+      "item": "http://STKalinow.ca/posts/darkartsofllms/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Thoughts: Dark Arts of Language Models",
+  "name": "Thoughts: Dark Arts of Language Models",
+  "description": "Thoughts about the future of applications and augmenting them with LLMs.",
+  "keywords": [
+    
+  ],
+  "articleBody": "I’ve been tinkering with LLMs and they’re cool because we can ask them stuff in plain english and they respond accordingly! But the real sorcery begins when we ask them to reason, and they can do this! We’ve got computers to “think”, we’ve invented magic!\nNow, I understand, it’s not real magic, they aren’t doing real reasoning. It’s an imitation, through the use of statistics and the process of predicting the next word. But I don’t think it matters.\nI like to view their capabilities of the models like a movie set. While on set, we’re in the Wild West! But, as we start walking to the edge, it’s clearly not the main street, turns out, we’re in a parking lot. For language models, they have a constructed movie set of their own where we can act \u0026 do scenes in. As long as we remain on set, our shots will appear believable. For language models, their movie set is constructed from their training data, and shooting scenes are the prompts we give the model. The closer we keep our prompt to the training data, the mode believable and on set we will be. So asking the model to give writing feedback will go great because the model has likely seen something of the sort. Asking a model to program in a new programming language it has never scene is going to perform poorly because it hasn’t been trained to do this.\nLuckily, the training data for these large language models is so immense and the parameter count so large, that we effectively get a reasoning engine. Effectively in the sense of, most reasonable things you can ask it to do are likely to fall somewhere in the training data.\nWhether the language models have true reasoning or not, it does not matter. In the end, if the output is close enough, then we can put their abilities to work.\nNow, when putting large language models to work, we can use them to do informational work for us, but the real dark arts lies in their use as reasoning engines. What we can do is connect programs together with LLMs. The models will act as reasoning engines, where they receive input, are prompted to reason and “think” about the input, and then make decisions appropriately. We can use them as a connective tissue. This idea is in the vein off Software 2.0, where we let the model and the data design the behavior. Where we worry less about the complexity and variety of situations, because we rely on the model to make reasonable decisions based on the input.\nWe can apply the idea to act between programs, processing and formatting the inputs and outputs. Or we can take steps to make it handle more and more tasks, having it think about the order of operations and which functions to call. On the extreme end is having the model act as the sole entity of the program itself, one of the earlier interesting experiments of GPT3 was having it pretend to be a backend server. This is a bit extreme, and the better applications are in domains with high variance or variability, so think things like level generation, creating suggestions for users, or working with user input.\nUser input is the application of LLMs which fascinates me the most because it lets us relax the interfaces we need. Computers always require such structured formatting with their input forms and structure, but by using language models, we can relax these requirements.\nThere was this great article discussing chat bots and interfaces, I would recommend. It highlights the benefits of chat bots, with them giving an pure open text-box, users are allowed to structure their input in the way they want. This allows them to use these chat bots dynamically, one moment asking for ideas with the next asking for feedback. But the article highlights the problem with this freedom, blank text-boxes don’t give any structure, they don’t tell the user how to use them, and they require constant work of typing out the context.\nBut here is where we can apply the dark arts, language models can solve their own problems! They be used to provide structure for the user, by giving suggestion prompts or generating interfaces, like buttons \u0026 sliders, dynamically. This can be done because we can feed the context where the language model can reason about the current desires of the user. We can reduce the work of the user by creating systems which automatically feed the model the context, where the application reaches a level of point and understand.\nGitHub Copilot is an example of automatically providing context. It’s a code generation application which automatically looks at surrounding text and accompanying files when generating code suggestions. The user doesn’t have the burden of inputing all the relevant parts of their code.\nWordcraft is an example of prompt suggestion. They ran a study with a set of writers and their demo writing app Wordcraft. The application doesn’t just generate text with language models, but it also creates suggestion prompts based on what is currently written. These auto generated prompts match the situation and can help give structure plus reduce work.\nWhere I see programs headed, they are going to augmented with these language models, creating dynamic programs. Where we can use them for interfaces like I’ve discussed or for even between programs. The models can reason about what to query. the format, or reason about results of functions. We can break from the rigidity of hard coded programs and insert the reasoning engines to create flexible ones.\nLets pause and discuss note-taking. Given a piece of paper, everyone has their own system of notes, and it changes depending on the task. At one moment we could be writing a web of ideas, drawing diagrams and pictures. In the next we could be diligently noting down everything the lecturer is say, starting the bits we don’t understand. Notes \u0026 paper are dynamic, they fit into our form of thinking.\nI see a form of programs where the interfaces are dynamic, where the programs are dynamic, where the software adapts to the our mode of thinking and needs, mirroring the fluidity of pen and paper. Just as our note-taking shifts to accommodate varying tasks, we could have our software morph and modify in real-time to better fit our needs. I imagine a future where software is not a rigid predefined tool, but a flexible partner in our process.\nLLMs can help enable these fluid programs, through thinking and adapting about our situation and desires. The future of software could consist of two thing, a model and a database, and everything else is generated.\nCurrently, these fluid systems aren’t completely practical. The models aren’t THAT smart. Inference takes too long. Compute power, especially on the edge, is limited. But we are in those early days of technology, and we don’t know the limits \u0026 feasibilities yet. The glimpses are there, the road ahead looks promising, there is plenty of room, let’s be positive and keep moving.\n",
+  "wordCount" : "1184",
+  "inLanguage": "en",
+  "datePublished": "2023-06-20T00:00:00Z",
+  "dateModified": "2023-06-20T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Stanislaw Kalinowski"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://STKalinow.ca/posts/darkartsofllms/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "STKalinow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://STKalinow.ca/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://STKalinow.ca/" accesskey="h" title="STKalinow (Alt + H)">STKalinow</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://STKalinow.ca/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://STKalinow.ca/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Thoughts: Dark Arts of Language Models
+    </h1>
+    <div class="post-description">
+      Thoughts about the future of applications and augmenting them with LLMs.
+    </div>
+    <div class="post-meta"><span title='2023-06-20 00:00:00 +0000 UTC'>June 20, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski
+
+</div>
+  </header> 
+  <div class="post-content"><p>I&rsquo;ve been tinkering with LLMs and they&rsquo;re cool because we can ask them stuff in plain english and they respond accordingly! But the real sorcery begins when we ask them to reason, and they can do this! We&rsquo;ve got computers to &ldquo;think&rdquo;, we&rsquo;ve invented magic!</p>
+<p>Now, I understand, it&rsquo;s not real magic, they aren&rsquo;t doing real reasoning. It&rsquo;s an imitation, through the use of statistics and the process of predicting the next word. But I don&rsquo;t think it matters.</p>
+<p>I like to view their capabilities of the models like a movie set. While on set, we&rsquo;re in the Wild West! But, as we start walking to the edge, it&rsquo;s clearly not the main street, turns out, we&rsquo;re in a parking lot. For language models, they have a constructed movie set of their own where we can act &amp; do scenes in. As long as we remain on set, our shots will appear believable. For language models, their movie set is constructed from their training data, and shooting scenes are the prompts we give the model. The closer we keep our prompt to the training data, the mode believable and on set we will be. So asking the model to give writing feedback will go great because the model has likely seen something of the sort. Asking a model to program in a new programming language it has never scene is going to perform poorly because it hasn&rsquo;t been trained to do this.</p>
+<p>Luckily, the training data for these large language models is so immense and the parameter count so large, that we effectively get a reasoning engine. Effectively in the sense of, most reasonable things you can ask it to do are likely to fall somewhere in the training data.</p>
+<p>Whether the language models have true reasoning or not, it does not matter. In the end, if the output is close enough, then we can put their abilities to work.</p>
+<p>Now, when putting large language models to work, we can use them to do informational work for us, but the real dark arts lies in their use as reasoning engines. What we can do is connect programs together with LLMs. The models will act as reasoning engines, where they receive input, are prompted to reason and &ldquo;think&rdquo; about the input, and then make decisions appropriately. We can use them as a connective tissue. This idea is in the vein off <a href="https://youtu.be/y57wwucbXR8">Software 2.0</a>, where we let the model and the data design the behavior. Where we worry less about the complexity and variety of situations, because we rely on the model to make reasonable decisions based on the input.</p>
+<p>We can apply the idea to act between programs, processing and formatting the inputs and outputs. Or we can take steps to make it handle more and more tasks, having it think about the order of operations and which functions to call. On the extreme end is having the model act as the sole entity of the program itself, one of the earlier interesting experiments of GPT3 was having it pretend to be a backend server. This is a bit extreme, and the better applications are in domains with high variance or variability, so think things like level generation, creating suggestions for users, or working with user input.</p>
+<p>User input is the application of LLMs which fascinates me the most because it lets us relax the interfaces we need. Computers always require such structured formatting with their input forms and structure, but by using language models, we can relax these requirements.</p>
+<p><a href="https://wattenberger.com/thoughts/boo-chatbots">There was this great article discussing chat bots and interfaces</a>, I would recommend. It highlights the benefits of chat bots, with them giving an pure open text-box, users are allowed to structure their input in the way they want. This allows them to use these chat bots dynamically, one moment asking for ideas with the next asking for feedback. But the article highlights the problem with this freedom, blank text-boxes don&rsquo;t give any structure, they don&rsquo;t tell the user how to use them, and they require constant work of typing out the context.</p>
+<p>But here is where we can apply the dark arts, language models can solve their own problems! They be used to provide structure for the user, by giving suggestion prompts or generating interfaces, like buttons &amp; sliders, dynamically. This can be done because we can feed the context where the language model can reason about the current desires of the user. We can reduce the work of the user by creating systems which automatically feed the model the context, where the application reaches a level of point and understand.</p>
+<p><a href="https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/#:~:text=How%20GitHub%20Copilot%20understands%20your,any%20point%20in%20your%20coding.">GitHub Copilot</a> is an example of automatically providing context. It&rsquo;s a code generation application which automatically looks at surrounding text and accompanying files when generating code suggestions. The user doesn&rsquo;t have the burden of inputing all the relevant parts of their code.</p>
+<p><a href="https://wordcraft-writers-workshop.appspot.com/learn">Wordcraft</a> is an example of prompt suggestion. They ran a study with a set of writers and their demo writing app Wordcraft. The application doesn&rsquo;t just generate text with language models, but it also creates suggestion prompts based on what is currently written. These auto generated prompts match the situation and can help give structure plus reduce work.</p>
+<p>Where I see programs headed, they are going to augmented with these language models, creating dynamic programs. Where we can use them for interfaces like I&rsquo;ve discussed or for even between programs. The models can reason about what to query. the format, or reason about results of functions. We can break from the rigidity of hard coded programs and insert the reasoning engines to create flexible ones.</p>
+<p>Lets pause and discuss note-taking. Given a piece of paper, everyone has their own system of notes, and it changes depending on the task. At one moment we could be writing a web of ideas, drawing diagrams and pictures. In the next we could be diligently noting down everything the lecturer is say, starting the bits we don&rsquo;t understand. Notes &amp; paper are dynamic, they fit into our form of thinking.</p>
+<p>I see a form of programs where the interfaces are dynamic, where the programs are dynamic, where the software adapts to the our mode of thinking and needs, mirroring the fluidity of pen and paper. Just as our note-taking shifts to accommodate varying tasks, we could have our software morph and modify in real-time to better fit our needs. I imagine a future where software is not a rigid predefined tool, but a flexible partner in our process.</p>
+<p>LLMs can help enable these fluid programs, through thinking and adapting about our situation and desires. The future of software could consist of two thing, a model and a database, and everything else is generated.</p>
+<p>Currently, these fluid systems aren&rsquo;t completely practical. The models aren&rsquo;t THAT smart. Inference takes too long. Compute power, especially on the edge, is limited. But we are in those early days of technology, and we don&rsquo;t know the limits &amp; feasibilities yet. The glimpses are there, the road ahead looks promising, there is plenty of room, let&rsquo;s be positive and keep moving.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://STKalinow.ca/">STKalinow</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

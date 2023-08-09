@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.117.0"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>STKalinow</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://STKalinow.ca/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://STKalinow.ca/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://STKalinow.ca/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://STKalinow.ca/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://STKalinow.ca/apple-touch-icon.png">
+<link rel="mask-icon" href="http://STKalinow.ca/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://STKalinow.ca/index.xml">
+<link rel="alternate" type="application/json" href="http://STKalinow.ca/index.json">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="STKalinow" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://STKalinow.ca/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="STKalinow"/>
+<meta name="twitter:description" content=""/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "STKalinow",
+  "url": "http://STKalinow.ca/",
+  "description": "",
+  "thumbnailUrl": "http://STKalinow.ca/favicon.ico",
+  "sameAs": [
+      "https://github.com/STKalinowski", "https://twitter.com/STKalinow"
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://STKalinow.ca/" accesskey="h" title="STKalinow (Alt + H)">STKalinow</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://STKalinow.ca/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://STKalinow.ca/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>Welcome to STKalinow</h1>
+    </header>
+    <div class="entry-content">
+        I am Stas Kalinowski. This is a website to track my learnings, share my thoughts, and improve my writing. I am currently focused on writing, improving my spaced repetition practice, and learning about agents + robotics.
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons">
+    <a href="https://github.com/STKalinowski" target="_blank" rel="noopener noreferrer me" title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+    <a href="https://twitter.com/STKalinow" target="_blank" rel="noopener noreferrer me" title="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+    </a>
+</div>
+
+    </footer>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Thoughts: Do I still need to know stuff?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>What’s the point in memorization if we cna look things up, what’s the point of learning if a model can do it for us. I’ve seen people questioning the need to learn how to write, program, etc. But, the skills are still useful now and will be useful in the future, it’s just the emphasis and needs will change.
+Socrates argued against writing, believing it would make people lazy. He was correct about making us lazy, but wrong about it being a bad thing....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-09 00:00:00 +0000 UTC'>August 9, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Thoughts: Do I still need to know stuff?" href="http://STKalinow.ca/posts/knowledgeuseful/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Thoughts: My most valuable concept.
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I have been a long time league of legends player, and a particular reddit post has resonated with me. There was this post, a translation of Dopa after reaching rank one. In it he discusses his idea of concepts, really just breaking down the game into a set of facts, whoever has the best facts wins. You don’t own them, you can take other peoples concepts and refine them.
+I think about this post from time to time....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-08 00:00:00 +0000 UTC'>August 8, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Thoughts: My most valuable concept." href="http://STKalinow.ca/posts/valuableconcepts/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Thoughts: My most valuable cards.
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I am a big believer in spaced repetition as a study method. I like it’s guaranteed process of learning. By far one of my favorite concepts for flash carding is writing what I call mistake or error cards.
+Whenever I make a mistake or fail at something, I add a card for it. It’s usually something along the lines of how a bug was introduced into the code or why I struggled with something I was studying....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-03 00:00:00 +0000 UTC'>August 3, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Thoughts: My most valuable cards." href="http://STKalinow.ca/posts/bestcards/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Project: Fiszka
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I am a fan of spaced repetition.
+Plenty of articles have been written advocating it, here is my favorite, Augmenting Long-term Memory by Michael Nielsen
+The technique is not only let’s you choose what to remember, but demonstrates the power of computers. The storage, organization, and scheduling is all handled by these spaced repetition programs. Your only task is to create, pick and choose what goes in.
+Past the benefits, spaced-repetition and flash-carding isn’t perfect....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-31 00:00:00 +0000 UTC'>July 31, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Project: Fiszka" href="http://STKalinow.ca/posts/projectfiszka/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Experiment: Encoder-Decoder Generation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I was reading through this CodeT5 paper, and this plain sight idea struck me; for encoder-decoder models, why aren’t we prompting with a separate decoder part? Like we have our input prompt to the encoder, but we could also add another part of the prompt to be used in the decoder.
+It might be mentioned somewhere, but I couldn’t find anything.
+In prompting, we are trying to influence the output of the model....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-07 00:00:00 +0000 UTC'>July 7, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Experiment: Encoder-Decoder Generation" href="http://STKalinow.ca/posts/experimentencoderdecodergeneration/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Thoughts: Tools &amp; Skill Ceiling
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I read this great write up by Krzysztof Kowalczyk about their experience writing SumatraPDF. One of their focuses was on simple design, with “80% of functionality with 20% of the UI.”
+Note taking, with pen and paper, follows this rule, if not more so. Its ink on paper, but the possibilities are endless! We create our own writing and note taking system, system of marking, staring, and highlighting. The act of writing is simple, but the expressive ness is high....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-07 00:00:00 +0000 UTC'>July 7, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Thoughts: Tools &amp; Skill Ceiling" href="http://STKalinow.ca/posts/thoughtstoolsskillceiling/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Experiment: Scores
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I create a simple web page to score sentences based on input traits.
+The idea is to let the models to take care of all the hard stuff, while we are just left with connecting everything up.
+In this case we are creating a page similar to my Lenses project, but now the model does the heavy lifting.
+It will take in some input text, a set of traits, and the output would be scores for each sentence....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-05 00:00:00 +0000 UTC'>July 5, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Experiment: Scores" href="http://STKalinow.ca/posts/experimentscores/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Project: Lenses
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Computers can now understand our language, how can we apply this to processes. One of the ideas is viewing text as a map. Normal reading, Top to Bottom &amp; Right to Left. Maps, visually display information which is immediately recognizable, zoom in and out.
+This map like approach is what I’m going for in Lenses.
+First the application begins by bringing in the text you’re reading, you can paste it in or provide a link and it will try its best to get the relevant text....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-30 00:00:00 +0000 UTC'>June 30, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Project: Lenses" href="http://STKalinow.ca/posts/projectlenses/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Thoughts: Dark Arts of Language Models
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I’ve been tinkering with LLMs and they’re cool because we can ask them stuff in plain english and they respond accordingly! But the real sorcery begins when we ask them to reason, and they can do this! We’ve got computers to “think”, we’ve invented magic!
+Now, I understand, it’s not real magic, they aren’t doing real reasoning. It’s an imitation, through the use of statistics and the process of predicting the next word....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-20 00:00:00 +0000 UTC'>June 20, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Thoughts: Dark Arts of Language Models" href="http://STKalinow.ca/posts/darkartsofllms/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Thoughts: Design for errors.
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>While working on my D&amp;D application, I’ve been thinking about designing around language models. I’ve come to the conclusion that any application using language models should design around correcting them.
+I was trying hard to make my “DM” as correct as possible. Wrangling the prompts, contexts, and pipelines, and I realized, we can’t guarantee perfect information.
+Communication is a hard thing we even struggle doing between people. Who hasn’t misunderstood someone or needed clarification....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-19 00:00:00 +0000 UTC'>June 19, 2023</span>&nbsp;·&nbsp;Stanislaw Kalinowski</footer>
+  <a class="entry-link" aria-label="post link to Thoughts: Design for errors." href="http://STKalinow.ca/posts/designforerrors/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://STKalinow.ca/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://STKalinow.ca/">STKalinow</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
