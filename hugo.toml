@@ -5,7 +5,7 @@ theme = 'papermod'
 
 [params.homeInfoParams]
 Title = "Welcome to STKalinow"
-Content = "I am Stas Kalinowski. This is a website to track my learnings, share my thoughts, and improve my writing. If you have any thoughts, feel free to reach out."
+Content = "I am Stas Kalinowski. This is a website to track my learnings, share my thoughts, and improve my writing. I am currently focused on writing, improving my spaced repetition practice, and learning about agents + robotics."
 
 [[params.socialIcons]]
 name = "Github"
