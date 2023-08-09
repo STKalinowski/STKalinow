@@ -1,0 +1,29 @@
+baseURL = 'http://STKalinow.ca/'
+languageCode = 'en-us'
+title = 'STKalinow'
+theme = 'papermod'
+
+[params.homeInfoParams]
+Title = "Welcome to STKalinow"
+Content = "I am Stas Kalinowski. This is a website to track my learnings, share my thoughts, and improve my writing. If you have any thoughts, feel free to reach out."
+
+[[params.socialIcons]]
+name = "Github"
+url = "https://github.com/STKalinowski"
+
+[[params.socialIcons]]
+name = "Twitter"
+url = "https://twitter.com/STKalinow"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"] # is necessary
+
+[[menu.main]]
+name = 'Archive'
+identifier = 'Archive'
+url = '/archives'
+
+[[menu.main]]
+name = 'Search'
+identifier = 'search'
+url = '/search'
