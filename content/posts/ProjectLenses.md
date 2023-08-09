@@ -16,7 +16,7 @@ Then once we have the text displayed there are two main features:
 
 Lens Views & Map Summary.
 
-![Screen Shot 2023-06-29 at 7.08.18 PM.png](/Images/ProjectLenses/LensesScreenCap.png)
+![Screen Shot 2023-06-29 at 7.08.18 PM.png](/images/ProjectLenses/LensesScreenCap.png)
 
 **********************Lens Views:**********************
 
@@ -32,6 +32,6 @@ The ability to zoom in and out. You can create summaries of the main text and ea
 
 That's lenses, exploring the idea of non-linear reading. I mainly made it because there are just too many ML papers to read and I've been making tools to help me process this information much faster. Originally I was justing going to make lenses based on my notes, but I found this custom label creation to feel much better. The best feature is definitely the lens from the text, being able to pick a sentence from the text and focusing on that specific part of the paper is a godsend. Right now I still need to improve inference speed and better text processing for relevant text, specifically with pdfs. Once I work those things out and do a bit of refactoring I'll release the code.
 
-![LensesGif1.gif](/Images/ProjectLenses/Lenses1.gif)
+![LensesGif1.gif](/images/ProjectLenses/Lenses1.gif)
 
-![LensesGif2.gif](/Images/ProjectLenses/Lenses2.gif)
+![LensesGif2.gif](/images/ProjectLenses/Lenses2.gif)

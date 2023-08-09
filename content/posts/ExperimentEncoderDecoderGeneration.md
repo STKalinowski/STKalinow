@@ -29,26 +29,26 @@ Example results:
 
 First keep in mind. These where generated using flan-t5-large, which is just a bit under 1B params! flan-t5 also isn't trained on code data as far as I know, which means strictness of formatting isn't as strong.
 
-![WriteOutline.PNG](/Images/EncoderDecoder/WriteOutline.png)
+![WriteOutline.PNG](/images/EncoderDecoder/WriteOutline.png)
 
 We can see above how our starting prompt of "Outline:\n Beginning:" funnels the generation, giving a frame work.
 
-![GenuineOutput.PNG](/Images/EncoderDecoder/GenuineOutput.png)
+![GenuineOutput.PNG](/images/EncoderDecoder/GenuineOutput.png)
 
-![GenuineOutput2.PNG](/Images/EncoderDecoder/GenuineOutput2.png)
+![GenuineOutput2.PNG](/images/EncoderDecoder/GenuineOutput2.png)
 
-![BadQA.PNG](/Images/EncoderDecoder/BadQA.png)
+![BadQA.PNG](/images/EncoderDecoder/BadQA.png)
 
 The above example shows both the training bias and how our decoder input can have a negative influence!
 
-![QA.PNG](/Images/EncoderDecoder/QA.png)
+![QA.PNG](/images/EncoderDecoder/QA.png)
 
-![WritingInf.PNG](/Images/EncoderDecoder/WritingInf.png)
+![WritingInf.PNG](/images/EncoderDecoder/WritingInf.png)
 
-![WritingInf2.PNG](/Images/EncoderDecoder/WritingInf2.png)
+![WritingInf2.PNG](/images/EncoderDecoder/WritingInf2.png)
 
-![Bob1.PNG](/Images/EncoderDecoder/Bob1.png)
+![Bob1.PNG](/images/EncoderDecoder/Bob1.png)
 
-![Bob2.PNG](/Images/EncoderDecoder/Bob2.png)
+![Bob2.PNG](/images/EncoderDecoder/Bob2.png)
 
 So hopefully this gives some idea on the technique of adding input strictly to the decoder. Gives us an avenue to influence the generation, but we need to be carefully test them out. I also suspect it to be more useful for models tuned on code because of the logic and formatting of the medium can be utilized!

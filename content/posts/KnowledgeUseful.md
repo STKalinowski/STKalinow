@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Thoughts: DO I still need to know stuff?'
+title: 'Thoughts: Do I still need to know stuff?'
 pubDate: 2023-08-09
 description: 'With language models emerging, do I still need to learn how to program?'
 author: 'Stanislaw Kalinowski'

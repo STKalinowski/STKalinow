@@ -1,5 +1,0 @@
-Red = EA4C4C
-Green = A1C45A
-Blue = 2BA5FF
-Yellow = F1C550
-Turquoise = 16AA98
