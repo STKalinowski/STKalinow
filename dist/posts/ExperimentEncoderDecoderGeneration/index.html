@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Astro v2.0.14">
+    <title>Experiment: Encoder-Decoder Generation</title>
+  <link rel="stylesheet" href="/_astro/ BestCards.43e4c0a7.css" /></head>
+  <body>
+    <div class="clearRead">
+      <div>
+    <h1>STKalinow</h1>
+    <div style="display:flex;grid-gap:12px">
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="/" style="background-color: #EA4C4C;color:black;">
+       <span>
+            Blog
+        </span>
+    </a>
+</div>
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="/about" style="background-color: #A1C45A;color:black;">
+       <span>
+            About
+        </span>
+    </a>
+</div>
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="https://www.twitter.com/STKalinow" style="background-color: #2BA5FF;color:black;">
+       <span>
+            Twitter
+        </span>
+    </a>
+</div>
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="https://www.Github.com/STKalinowski" style="background-color: #F1C550;color:black;">
+       <span>
+            Github
+        </span>
+    </a>
+</div>
+    </div>
+</div>
+<hr>
+      <h1>Experiment: Encoder-Decoder Generation</h1>
+      <h3>Better encoder-decoder generation with one simple change</h3><p>I was reading through this <a href="https://github.com/salesforce/CodeT5">CodeT5 paper</a>, and this plain sight idea struck me; for encoder-decoder models, why aren’t we prompting with a separate decoder part? Like we have our input prompt to the encoder, but we could also add another part of the prompt to be used in the decoder.</p>
+<p>It might be mentioned somewhere, but I couldn’t find anything.</p>
+<p>In prompting, we are trying to influence the output of the model. This influence is seen not only in the text we write, but the form we write it in. For encoder-decoder models, its just makes sense to keep the core of the ideas in the encoder input, and any meta-structure (ex. Summary:, ```JSON, “The key ideas of the text are …”, etc) should only go into the decoder part.</p>
+<p>So, make the encoded section represent the ideas and the task.</p>
+<p>While the decoder receives some starting template to influence the generation.</p>
+<p>You wouldn’t want to always do this. It works main for tasks which have a natural shape/starting point. So, for a outline generation task:
+Encoder input is “Create an outline for the following story. {story_traits}”
+Decoder input is “Outline:\n Beginning: ”
+Here we are giving the model a starting text to begin generating from! But it isn’t muddying the encoding part!</p>
+<p><a href="https://github.com/STKalinowski/EncoderDecoderModelBetterGen">Here is a link to my notebook doing this with HuggingFace using t5-flan.</a></p>
+<p>It’s not a complete end-all be-all solution, but this would have been such a useful trick for me had I thought of it earlier.</p>
+<p>Example results:</p>
+<p>First keep in mind. These where generated using flan-t5-large, which is just a bit under 1B params! flan-t5 also isn’t trained on code data as far as I know, which means strictness of formatting isn’t as strong.</p>
+<p><img src="/Images/EncoderDecoder/WriteOutline.png" alt="WriteOutline.PNG"></p>
+<p>We can see above how our starting prompt of “Outline:\n Beginning:” funnels the generation, giving a frame work.</p>
+<p><img src="/Images/EncoderDecoder/GenuineOutput.png" alt="GenuineOutput.PNG"></p>
+<p><img src="/Images/EncoderDecoder/GenuineOutput2.png" alt="GenuineOutput2.PNG"></p>
+<p><img src="/Images/EncoderDecoder/BadQA.png" alt="BadQA.PNG"></p>
+<p>The above example shows both the training bias and how our decoder input can have a negative influence!</p>
+<p><img src="/Images/EncoderDecoder/QA.png" alt="QA.PNG"></p>
+<p><img src="/Images/EncoderDecoder/WritingInf.png" alt="WritingInf.PNG"></p>
+<p><img src="/Images/EncoderDecoder/WritingInf2.png" alt="WritingInf2.PNG"></p>
+<p><img src="/Images/EncoderDecoder/Bob1.png" alt="Bob1.PNG"></p>
+<p><img src="/Images/EncoderDecoder/Bob2.png" alt="Bob2.PNG"></p>
+<p>So hopefully this gives some idea on the technique of adding input strictly to the decoder. Gives us an avenue to influence the generation, but we need to be carefully test them out. I also suspect it to be more useful for models tuned on code because of the logic and formatting of the medium can be utilized!</p><hr><div style="display:flex;flex-wrap:wrap;align-items:center">
+        <h3>If you have any feedback or comments, feel free to reach out to me!</h3>
+    </div>
+    </div>
+  </body></html>

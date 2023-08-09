@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Astro v2.0.14">
+    <title>Question: How do vector databases work?</title>
+  <link rel="stylesheet" href="/_astro/ BestCards.43e4c0a7.css" /></head>
+  <body>
+    <div class="clearRead">
+      <div>
+    <h1>STKalinow</h1>
+    <div style="display:flex;grid-gap:12px">
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="/" style="background-color: #EA4C4C;color:black;">
+       <span>
+            Blog
+        </span>
+    </a>
+</div>
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="/about" style="background-color: #A1C45A;color:black;">
+       <span>
+            About
+        </span>
+    </a>
+</div>
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="https://www.twitter.com/STKalinow" style="background-color: #2BA5FF;color:black;">
+       <span>
+            Twitter
+        </span>
+    </a>
+</div>
+        <div id="ButtonBack">
+    <a id="ButtonMain" href="https://www.Github.com/STKalinowski" style="background-color: #F1C550;color:black;">
+       <span>
+            Github
+        </span>
+    </a>
+</div>
+    </div>
+</div>
+<hr>
+      <h1>Question: How do vector databases work?</h1>
+      <h3>Looking into how vector indexes work, an intuitive explanation.</h3><p><strong><strong><strong><strong><strong>What I know:</strong></strong></strong></strong></strong></p>
+<p>Hello there, so I’ve been seeing plenty of talk on vector databases, and I didn’t really know how they worked. I understood how databases work &#x26; I understood how vector embeddings work. But I didn’t know how vector databases worked, specifically in terms of how they speed up vector search.</p>
+<p>I know bunch about databases and their different designs. Databases are essentially tools that store and organize data. They come with different formats and implementations, but they have the same core purpose: to make it easier for us to access the information we need. Databases usually have some sort of pre-organization of the data called an index. These indexes give us a way to access data quicker.</p>
+<p>I also know about embeddings. Embeddings are representation of data as a vector, a column of numbers. These representation can be made through a model or some other method of creating a representation, like Bag-of-Words. But what matters is that embeddings capture some sort of representation of what they encode. So if we are encoding a picture, text, or some other data — it is put through the embedding function and a vector comes out representing the data.</p>
+<p>With our embeddings, we can start comparing them. There are a number of comparison functions we could use such as cosine similarity, L2 norm, or even creating a custom comparison function. The comparison function works by taking in the two vectors and outputting a number representing the similarity.</p>
+<p><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>What I do not know:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
+<p>The concepts of databases and embeddings, I understand, but what I didn’t know is how vector databases work to speed up search. I knew these databases used some sort of index to speed up the search process. However, I wasn’t actually sure what kind of indexes they used or how they worked. So I wanted to learn more about them and the mechanics behind speeding up search.</p>
+<p>Additionally, I was curious about the tradeoffs that come with using these indexes. Balancing tradeoffs is important, and it’s good to understand what “buttons” we have available when setting up our vector databases.</p>
+<p><strong>So heres what I found out:</strong></p>
+<p>Lets setup our base naive approach first:</p>
+<p>→We have a collection of vectors</p>
+<p>→We have a comparison function, it takes two vectors and outputs a number representing similarity</p>
+<p>→We have an input vector, that we want to find the closest vector in our collection.</p>
+<p><img src="/Images/HowDoVectorDBS/VDB_Setting.png" alt="VDB_Setting.PNG"></p>
+<p>The naive way to find the closest element in our collection is to go through each element one by one and run the comparison function. And it’s clear that this method won’t scale. With each additional vector added directly adds another comparison, a single comparison is small, but they add up as our collection grows and we process more input. Our objective is to lower the number of comparisons while still finding an accurate output.</p>
+<p><strong><strong><strong>ANN</strong></strong></strong></p>
+<p>This is where the first intuitive approach comes in.</p>
+<p>What we can do is grab some vectors from our collection and deem them as representatives.</p>
+<p>With our remaining vectors, we compare them to each representative and find the closest one, then put the vector in the according representatives “bin”. So each representative has its own collection, and we go through all the vectors and place them accordingly.</p>
+<p>Now when we get an input, we first compare it only to the representatives, find the closest, and then get the representatives bin and compare our input vector to the ones in the bin. We have now cut down a fraction of the comparisons! We are only comparing with the representatives plus the vectors found in the bin.</p>
+<p><img src="/Images/HowDoVectorDBS/VDB_Bin.png" alt="VDB_Bin.PNG"></p>
+<p>You might be thinking that this method does not always give us the best match. What if the second closest bin has the closest vector? And you are right, this method is an <strong>approximate nearest neighbour method(ANN)</strong>. We get an approximate vector and are not guaranteed to find the closest.</p>
+<p>But we are not limited to searching just the closest bin, we can look at the two closest bins, or three, or etc. So if we want more accuracy, we can choose to trade of speed for a more though search.</p>
+<p>A more formal version of this method is a clustering method called <strong>Inverted File Index(IVF)</strong>. It constructs the index in a better way than just randomly picking representatives. But the principles of the idea still hold, we have representative vectors which we compare with our input, and then we get the collection of the representatives and search through that, and conclude with our closest match.</p>
+<p>Our “knobs” are picking the number of bins to search, but we also have control in the way we construct our bins. We can pick how many representatives we want, where usually it’s a fraction of the size of our collection.</p>
+<p>Done? Well, the computer scientists eggs us on, “Oi, we can do better than that!”.</p>
+<p>We have reduced the number of comparisons, but as our collection scales, we still end up searching through a lot of vectors. Increasing the number of bins doesn’t help us with scaling, it will always be some fraction of our collection. We need a better way of searching through vectors, we need a way to get information from each comparison.</p>
+<p><strong>HNSWG</strong></p>
+<p>What info do we get with one comparison?</p>
+<p>Well, there is a similar idea found in binary search.  In binary search, we compare with the middle element and cut out the half we don’t need. With each comparison, we get closer and closer to our answer.</p>
+<p>So we want to take this idea and use it for our vector search. But vectors are different, we can’t just sort them on a line like in binary search. However, we do have a measure for closeness. Therefore by using our comparison function, we can construct a graph, and use the graph to move closer and closer with each comparison!</p>
+<p>To build our graph, each vector in our collection is a node. Then for each node, we compare and find the k closest nodes, and make them the edges. This then gives us a graph we can use, awesome.(Connectivity is a concern, but there are techniques to make it fully connected, lets not worry about those details right now)</p>
+<p>To search with our graph, we begin at any node, compare our input vector to the node and its edges. If one of the edges is closer to our input than that becomes our new main node, and repeat. Each iteration now moves us closer and closer to the answer.</p>
+<p>But there is a problem, with a lot of nodes, our traversal can get quite slow.  It can take many iterations to reach the closest vector and this is especially influenced by our starting vector.</p>
+<p>This is where the our next idea comes in, skip lists!</p>
+<p>The idea is to make a graph which lets us move further with each step. Then after using this graph, we go to the same spot in our main graph and find the precise answer.</p>
+<p>We do this by constructing multiple graphs. We start with a top graph which only has a small number of nodes. Because it has fewer nodes, each edge is going to be “longer” and each iteration will move us further. Then once we reach the closest node, they are connected to a more dense graph underneath. We then repeat the process, and we continue doing this till we reach the minimum of the bottom layer.</p>
+<p><img src="/Images/HowDoVectorDBS/VDB_Layers.png" alt="VDB_Layers.PNG"></p>
+<p><img src="/Images/HowDoVectorDBS/VDB_Graph.png" alt="VDB_Graph.PNG"></p>
+<p>This method is more formalized as the <strong>Hierarchical Navigable Small World Graphs(HNSWG).</strong> There are a number of different “knobs” we can use to control performance. We can pick the number of layers as well as the number of edges each node has. Since this is still an approximation method, we don’t have to find the absolute closest match in each layer, we can choose to stop after a certain amount of iterations, allowing us to create a more consistent search time.</p>
+<p>One caveat to this method is the storage requirements. Please keep in mind that the indexes require some space to store them. Therefore if you opt to use this method, be mindful of the storage upkeep of the graph layers!</p>
+<p>So now we are getting some nice scaling! Yeah!</p>
+<p>Then the computer scientist is enjoying his hash browns. Of course! How could we forget about hashing!</p>
+<p><strong><strong><strong>Hashing!</strong></strong></strong></p>
+<p>Hashes are great, they might not always be the answer, but they come with properties computer scientists love, constant time. The next idea diverges a bit from the last two because it’s based on hashing, but its hashing with a twist.</p>
+<p>Instead of avoiding collisions, we are trying to create collisions. Specifically we want to construct hash tables where similar vectors will collide with each other. If we achieve this, then our search process will consist of a few calculations and a few comparisons.</p>
+<p>So we have two parts to the process, the hash calculations and comparing them with candidates.</p>
+<p>What matters is that we need to develop a hash to take in vectors and group them based on similarity. This problem is one we glossed over earlier, putting vectors on a line.</p>
+<p>There are a number of approaches to how we could create these hashes. In all honesty my understanding of these methods is a bit fuzzy at best. What matters is we put our vector through a function and a value comes out, giving an index, and we want similar vectors to output the same index.</p>
+<p><img src="/Images/HowDoVectorDBS/VDB_Hash.png" alt="VDB_Hash.PNG"></p>
+<p>With any such hashing method, because we are boiling vectors down to a point, we will loose some nuance with our hashing. We are transforming them from multidimensional vectors to single point indexes!</p>
+<p>To help alleviate this, we can have multiple hashes. Our vectors can be chunked up by sections, and so these sections can represent distinct characteristics of our vector. We now have a fixed set of hashes to calculate, and we take a look at collisions. We can choose to compare each collision, or we choose to only grab candidates where j many hashes collide.</p>
+<p>You might notice how this method is kinda similar to our first binning method, except instead of making a number of comparisons with representative vectors, we use a fixed set of hash functions which determine our second phase of comparisons.</p>
+<p><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Vector Quantization</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
+<p>Lastly, lets circle back and discuss a concept relevant to the storage part of vector databases, dimension reduction. When we have a lot of vectors, the column of numbers can begin to take up a bit of memory. We can reduce the memory by making our vector smaller, vector quantization. There could be a number of quantization methods, one approach it to break up the vector into parts, let’s say in threes. Then for each section of three we take the middle value. This process then gives us a new vector representing the old one and we reduced the space requirements by a third, nice.</p>
+<p><img src="/Images/HowDoVectorDBS//VDB_Quant.png" alt="VDB_Quant.PNG"></p>
+<p>So thats pretty much it, just a high level overview of vector databases. Hopefully you intuition has been built up. I didn’t want to focus on the particular maths nor the database portion of worrying about page tables and being memory aware.</p>
+<p>You now have an idea of the techniques and can look up anything.</p><hr><div style="display:flex;flex-wrap:wrap;align-items:center">
+        <h3>If you have any feedback or comments, feel free to reach out to me!</h3>
+    </div>
+    </div>
+  </body></html>
