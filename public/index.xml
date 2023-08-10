@@ -2,107 +2,107 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>STKalinow</title>
-    <link>https://www.STKalinowski.ca/</link>
+    <link>https://www.stkalinow.xyz/</link>
     <description>Recent content on STKalinow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.STKalinowski.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.stkalinow.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughts: Do I still need to know stuff?</title>
-      <link>https://www.STKalinowski.ca/posts/knowledgeuseful/</link>
+      <link>https://www.stkalinow.xyz/posts/knowledgeuseful/</link>
       <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/knowledgeuseful/</guid>
+      <guid>https://www.stkalinow.xyz/posts/knowledgeuseful/</guid>
       <description>With language models emerging, do I still need to learn how to program?</description>
     </item>
     
     <item>
       <title>Thoughts: My most valuable concept.</title>
-      <link>https://www.STKalinowski.ca/posts/valuableconcepts/</link>
+      <link>https://www.stkalinow.xyz/posts/valuableconcepts/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/valuableconcepts/</guid>
+      <guid>https://www.stkalinow.xyz/posts/valuableconcepts/</guid>
       <description>Compression, Simplification, Generalization = Learning</description>
     </item>
     
     <item>
       <title>Thoughts: My most valuable cards.</title>
-      <link>https://www.STKalinowski.ca/posts/bestcards/</link>
+      <link>https://www.stkalinow.xyz/posts/bestcards/</link>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/bestcards/</guid>
+      <guid>https://www.stkalinow.xyz/posts/bestcards/</guid>
       <description>Space repetition as a feedback mechanism.</description>
     </item>
     
     <item>
       <title>Project: Fiszka</title>
-      <link>https://www.STKalinowski.ca/posts/projectfiszka/</link>
+      <link>https://www.stkalinow.xyz/posts/projectfiszka/</link>
       <pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/projectfiszka/</guid>
+      <guid>https://www.stkalinow.xyz/posts/projectfiszka/</guid>
       <description>Setting out to solve spaced repetition.</description>
     </item>
     
     <item>
       <title>Experiment: Encoder-Decoder Generation</title>
-      <link>https://www.STKalinowski.ca/posts/experimentencoderdecodergeneration/</link>
+      <link>https://www.stkalinow.xyz/posts/experimentencoderdecodergeneration/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/experimentencoderdecodergeneration/</guid>
+      <guid>https://www.stkalinow.xyz/posts/experimentencoderdecodergeneration/</guid>
       <description>Better encoder-decoder generation with one simple change</description>
     </item>
     
     <item>
       <title>Thoughts: Tools &amp; Skill Ceiling</title>
-      <link>https://www.STKalinowski.ca/posts/thoughtstoolsskillceiling/</link>
+      <link>https://www.stkalinow.xyz/posts/thoughtstoolsskillceiling/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/thoughtstoolsskillceiling/</guid>
+      <guid>https://www.stkalinow.xyz/posts/thoughtstoolsskillceiling/</guid>
       <description>Thoughts on easy to learn, hard to master.</description>
     </item>
     
     <item>
       <title>Experiment: Scores</title>
-      <link>https://www.STKalinowski.ca/posts/experimentscores/</link>
+      <link>https://www.stkalinow.xyz/posts/experimentscores/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/experimentscores/</guid>
+      <guid>https://www.stkalinow.xyz/posts/experimentscores/</guid>
       <description>Small experimentation with the ideas of software 2.0 by letting the model take care of everything.</description>
     </item>
     
     <item>
       <title>Project: Lenses</title>
-      <link>https://www.STKalinowski.ca/posts/projectlenses/</link>
+      <link>https://www.stkalinow.xyz/posts/projectlenses/</link>
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/projectlenses/</guid>
+      <guid>https://www.stkalinow.xyz/posts/projectlenses/</guid>
       <description>Exploring the idea of viewing text as a map.</description>
     </item>
     
     <item>
       <title>Thoughts: Dark Arts of Language Models</title>
-      <link>https://www.STKalinowski.ca/posts/darkartsofllms/</link>
+      <link>https://www.stkalinow.xyz/posts/darkartsofllms/</link>
       <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/darkartsofllms/</guid>
+      <guid>https://www.stkalinow.xyz/posts/darkartsofllms/</guid>
       <description>Thoughts about the future of applications and augmenting them with LLMs.</description>
     </item>
     
     <item>
       <title>Thoughts: Design for errors.</title>
-      <link>https://www.STKalinowski.ca/posts/designforerrors/</link>
+      <link>https://www.stkalinow.xyz/posts/designforerrors/</link>
       <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/designforerrors/</guid>
+      <guid>https://www.stkalinow.xyz/posts/designforerrors/</guid>
       <description>LLM applications should design around errors &amp;amp; corrections.</description>
     </item>
     
     <item>
       <title>Thoughts: Is prompting just writing?</title>
-      <link>https://www.STKalinowski.ca/posts/promptingwriting/</link>
+      <link>https://www.stkalinow.xyz/posts/promptingwriting/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.STKalinowski.ca/posts/promptingwriting/</guid>
+      <guid>https://www.stkalinow.xyz/posts/promptingwriting/</guid>
       <description>Connecting the idea of abstract pyramid to prompting LLMs.</description>
     </item>
     
