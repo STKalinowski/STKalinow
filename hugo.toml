@@ -1,4 +1,4 @@
-baseURL = 'http://STKalinow.ca/'
+baseURL = 'http://www.STKalinow.ca/'
 languageCode = 'en-us'
 title = 'STKalinow'
 theme = 'papermod'
