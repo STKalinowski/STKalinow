@@ -1,11 +1,11 @@
-baseURL = 'http://www.STKalinow.ca/'
+baseURL = 'www.STKalinowski.ca/'
 languageCode = 'en-us'
 title = 'STKalinow'
 theme = 'papermod'
 
 [params.homeInfoParams]
-Title = "Welcome to STKalinow"
-Content = "I am Stas Kalinowski. This is a website to track my learnings, share my thoughts, and improve my writing. I am currently focused on writing, improving my spaced repetition practice, and learning about agents + robotics."
+Title = "Welcome"
+Content = "I am Stas Kalinowski. Using this site to share my thoughts and practice my writing. I am currently focused on writing, my memory practice, and studying ML."
 
 [[params.socialIcons]]
 name = "Github"
